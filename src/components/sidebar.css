@@ -1,0 +1,168 @@
+/* sidebar.css */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001;
+    padding: 20px;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.account-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    font-weight: bold;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.tab-content,
+.account-tab-content {
+    overflow-y: auto;
+    max-height: calc(100vh - 150px); 
+}
+
+.scrollable-form-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 20px; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #000000;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.scrollable-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.scrollable-content {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.fixed-button-container {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 10px 0;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-outline-primary {
+    border: 1px solid #000000;
+    background-color: transparent;
+    color: #000000;
+}
+
+.btn-outline-primary:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.fixed-button {
+    position: sticky;
+    bottom: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}

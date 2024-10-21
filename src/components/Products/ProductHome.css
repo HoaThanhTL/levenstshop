@@ -1,0 +1,140 @@
+.product-section {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.product-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.product-title h2 {
+    font-size: large;
+    cursor: pointer;
+    margin-right: 20px;
+    color: gray;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.product-title h2.active {
+    color: black;
+}
+
+.product-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0; 
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition: transform 0.3s ease;
+    width: 100%;
+    transform: scaleX(0);
+}
+
+.product-title h2.active::after {
+    transform: scaleX(1);
+}
+
+.product-title h2:hover::after {
+    transform: scaleX(1);
+}
+
+.gray-line {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 1px;
+    background-color: gray;
+    width: 100%;
+}
+
+.product img {
+    width: 100%;
+    height: auto; 
+}
+
+.product img:hover {
+    transform: none;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: red; 
+}
+
+.inactive {
+    color: gray; 
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.navigation button {
+    margin: 0 5px;
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-all-link {
+    font-weight: bold;
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+}
+
+.products {
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+    cursor: grab;
+}
+
+.product {
+    flex: 0 0 calc(100% / 4);
+    text-align: center;
+    border-left: 1px solid rgb(128, 128, 128); 
+    border-right: 1px solid rgb(128, 128, 128); 
+    min-width: 200px; 
+}
+
+.products::before {
+    content: '';
+    display: block;
+    height: 2px; 
+    background-color: black; 
+    position: absolute; 
+    bottom: 0;
+    left: 0; 
+    width: calc(100% + 16px); 
+    z-index: 0; 
+}
+
+.products::-webkit-scrollbar {
+    display: none; 
+}
+
+.h3, h3 {
+    font-size: 20px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
+}
+
+.product:last-child {
+    margin-right: 0; 
+}
